@@ -1,2 +1,2 @@
 # LeetCode
-LeetCode submissions in Java
+LeetCode submissions solved in Java
