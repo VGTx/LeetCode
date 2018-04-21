@@ -1,0 +1,30 @@
+class Solution {
+    public int uniqueMorseRepresentations(String[] words) {
+        HashSet<String> trans = new HashSet<String>();
+        String[] table = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+        int length;
+        String conversion = "";
+        
+        for(String temp :words){
+            
+            length = temp.length();
+            int i = 0;
+            conversion = "";
+            while(i<length){
+                conversion = conversion + table[(int)temp.charAt(i)-97];
+                i++;
+            }
+            if(trans.contains(conversion)){
+                continue;
+            }
+            else{
+                trans.add(conversion);
+            }
+        
+            
+        }
+        return trans.size();    
+
+        
+    }
+}
