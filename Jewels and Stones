@@ -1,0 +1,13 @@
+class Solution {
+    public int numJewelsInStones(String J, String S) {
+        int size = S.length();
+        int count = 0;
+        
+        while(size>0){
+            if(J.indexOf(S.charAt(size-1))>=0)
+                count++;
+            size--;
+        }
+        return count;
+    }
+}
