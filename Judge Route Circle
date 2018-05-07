@@ -1,0 +1,30 @@
+class Solution {
+    public boolean judgeCircle(String moves) {
+        
+        char[] movelist;
+        movelist = moves.toCharArray();
+        int rcount = 0;
+        int lcount = 0;
+        int ucount = 0;
+        int dcount = 0;
+        for(int i=0; i<movelist.length; i++){
+            if(movelist[i] == 'r'|| movelist[i] == 'R'){
+                rcount++;
+            }
+            else if(movelist[i] == 'l'|| movelist[i] == 'L'){
+                lcount++;
+            }
+            else if(movelist[i] == 'u'|| movelist[i] == 'U'){
+                ucount++;
+            }
+            else if(movelist[i] == 'd'|| movelist[i] == 'D'){
+                dcount++;
+            }
+        }
+        if(rcount == lcount && ucount == dcount)
+            return true;
+        
+        return false;
+
+    }
+}
